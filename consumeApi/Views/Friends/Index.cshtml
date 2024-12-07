@@ -1,0 +1,78 @@
+﻿@using consumeApi.Models
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<hr />
+<table class="table bg-info">
+    @foreach (CategoryModel item in (List<CategoryModel>) 
+        ViewData["categoryList"])
+    {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>@item.Description</td>
+            <td>@item.Picture</td>
+
+        </tr>
+    }
+</table>
+
+<hr/>
+<table class="table bg-info">
+    @foreach (var item in ViewBag.catList)
+    {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>@item.Description</td>
+            <td>@item.Picture</td>
+
+        </tr>
+    }
+</table>
+
+
+<h1>@ViewBag.greetings</h1>
+<h1>@ViewData["user"]</h1>
+<hr />
+<table>
+    @foreach (var item in ViewBag.names)
+    {
+        <tr>
+            <td>
+                @item
+            </td>
+        </tr>
+    }
+</table>
+<hr />
+<h1>Using View Bag</h1>
+<ul>
+    @foreach (var item in ViewBag.names)
+    {
+        <li>@item</li>
+    }
+</ul>
+<hr />
+
+<h1>USing View data</h1>
+<ul>
+    @foreach (string item in (IEnumerable<String>)ViewData["usernames"])
+    {
+        <li>@item</li>
+    }
+</ul>
+<br />
+<hr />
+
+
+
+
+
+
+
+
+
+

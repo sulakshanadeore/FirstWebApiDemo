@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of Customers</h2>
+
+<table class="table table-bordered">
+    <tr>
+        
+        <th>Customerid</th>
+        <th>CustomerName</th>
+        
+    </tr>
+    
+    @foreach (var item in ViewBag.custList)
+	{
+        <tr>
+            <td>@item.Custid</td>
+            <td>@item.CustName</td>
+            <td>@Html.ActionLink("Select Customer Name","Details",new {id=@item.CustName})</td>
+        </tr>
+	}
+</table>
+
+

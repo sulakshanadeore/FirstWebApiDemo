@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h1>Showing the orders for customer :  @ViewBag.CName</h1>
+
+<table class="table table-primary">
+    <tr>
+        <th>Orderid</th>
+        <th>Productid</th>
+        <th>Qty</th>
+
+    </tr>
+    @foreach (var item in ViewBag.ordersData)
+    {
+        <tr>
+            <td>@item.Orderid</td>
+            <td>@item.Productid</td>
+            <td>@item.Qty</td>
+
+        </tr>
+    }
+
+</table>
